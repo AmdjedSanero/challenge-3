@@ -4,7 +4,7 @@
 html,
 body {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   width: 100%;
   overflow-x: hidden;
   font-family: "Oswald", sans-serif;
@@ -12,8 +12,32 @@ body {
 }
 .container {
   padding: 0 60px;
-  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
+/*Small*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/*Medium*/
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/*Larg*/
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
 .top-header {
   background-color: #303030;
   color: #ffffff;
@@ -83,6 +107,37 @@ body {
   text-transform: uppercase;
   border-radius: 5px;
 }
+/*Small*/
+@media (max-width: 768px) {
+  .landing .context .container {
+    top: 40%;
+  }
+  .landing .context .title span {
+    font-size: 45px;
+  }
+  .landing .context .par p {
+    font-size: 14px;
+    line-height: 1.4em;
+  }
+  .landing .context .btn span {
+    padding: 5px 10px;
+    font-size: 22px;
+  }
+}
+
+/*Medium*/
+
+@media (min-width: 992px) {
+  .landing .context .container {
+  }
+}
+
+/*Larg*/
+
+@media (min-width: 1200px) {
+  .landing .context .container {
+  }
+}
 .dance-tour {
   background-color: #e8631c;
   color: #ffffff;
@@ -107,11 +162,11 @@ body {
   font-weight: 400;
   font-family: "Montserrat", sans-serif;
   letter-spacing: 1px;
-  width: 700px;
+  max-width: 700px;
 }
 .galerry {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 20px;
 }
 .galerry .box {
