@@ -8,6 +8,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   font-family: "Oswald", sans-serif;
+  background-color: #303030;
 }
 .container {
   padding: 0 60px;
@@ -17,6 +18,9 @@ body {
   background-color: #303030;
   color: #ffffff;
   padding: 10px 0;
+  position: fixed;
+  z-index: 500;
+  width: 100%;
 }
 .top-header .container .menu {
   display: flex;
@@ -78,4 +82,95 @@ body {
   font-size: 24px;
   text-transform: uppercase;
   border-radius: 5px;
+}
+.dance-tour {
+  background-color: #e8631c;
+  color: #ffffff;
+  padding-bottom: 60px;
+}
+
+.context-1 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+.context-1 .title {
+  font-size: 55px;
+  font-weight: bold;
+}
+.context-1 .para {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  width: 700px;
+}
+.galerry {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 20px;
+}
+.galerry .box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #303030;
+}
+.galerry .box img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+.galerry .box span {
+  padding-top: 20px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 24px;
+}
+.galerry .box p {
+  padding: 0 10px;
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+}
+.galerry .box-p {
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e8631c;
+  border-radius: 10px;
+  height: 400px;
+}
+.galerry .box-p img {
+  padding-top: 30px;
+  width: 100px;
+  object-fit: cover;
+}
+.galerry .box-p span {
+  padding-top: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 26px;
+}
+.galerry .box-p p {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.galerry .box-p .btn {
+  padding: 20px 20px;
+  font-weight: 400;
+  background-color: #303030;
+  width: calc(100% - 20px);
+  font-size: 22px;
+  border-radius: 5px;
+  cursor: pointer;
 }
