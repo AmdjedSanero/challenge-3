@@ -306,3 +306,95 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+.section3 {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+  background-color: #e8631c;
+}
+.section3 .image1 img {
+  width: 100%;
+  object-fit: cover;
+}
+.section3 .context-2 {
+  position: relative;
+}
+.section3 .context-2 .container {
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  gap: 20px;
+  max-width: 600px;
+  position: absolute;
+  top: 100px;
+}
+.section3 .context-2 .title span {
+  font-size: 60px;
+  font-weight: bold;
+  position: relative;
+  top: 20px;
+  text-transform: uppercase;
+  width: 70%;
+}
+.section3 .context-2 .par p {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  width: 50%;
+}
+.section3 .context-2 .btn {
+  cursor: pointer;
+}
+
+.section3 .context-2 .btn span {
+  font-weight: 400;
+  background-color: #303030;
+  padding: 5px 50px;
+  font-size: 24px;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+/*Small*/
+@media (max-width: 768px) {
+  .section3 {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .section3 .context-2 {
+    height: 300px;
+    position: relative;
+  }
+
+  .section3 .context-2 .container {
+    position: relative;
+  }
+  .section3 .context-2 .title span {
+    font-size: 10px;
+    width: 100%;
+  }
+  .section3 .context-2 .par p {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .section3 .context-2 .btn span {
+  }
+}
+
+/*Medium*/
+
+@media (max-width: 992px) {
+  .section3 .context-2 .container {
+    top: 35px;
+  }
+  .section3 .context-2 .title span {
+    font-size: 46px;
+  }
+}
+
+/*Larg*/
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
