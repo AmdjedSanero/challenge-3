@@ -234,6 +234,7 @@ body {
 .context-1 .title {
   font-size: 55px;
   font-weight: bold;
+  text-transform: uppercase;
 }
 .context-1 .para {
   font-weight: 400;
@@ -312,6 +313,10 @@ body {
   grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
   background-color: #e8631c;
 }
+.section3 .image1:last-child {
+  position: relative;
+  top: 2px;
+}
 .section3 .image1 img {
   width: 100%;
   object-fit: cover;
@@ -377,9 +382,6 @@ body {
     font-size: 14px;
     width: 80%;
   }
-
-  .section3 .context-2 .btn span {
-  }
 }
 
 /*Medium*/
@@ -416,4 +418,28 @@ body {
   .section3 .context-2 .par p {
     width: 80%;
   }
+}
+.stats {
+  margin-bottom: 60px;
+}
+.stats .statistics {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
+.stats .statistics .box-s {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.stats .statistics .box-s span {
+  font-size: 32px;
+  font-weight: bold;
+}
+.stats .statistics .box-s p {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  color: rgb(160, 160, 160);
 }
