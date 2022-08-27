@@ -354,10 +354,12 @@ body {
   border-radius: 5px;
 }
 /*Small*/
+
+/*Small*/
 @media (max-width: 768px) {
   .section3 {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .section3 .context-2 {
     height: 300px;
@@ -369,11 +371,11 @@ body {
   }
   .section3 .context-2 .title span {
     font-size: 10px;
-    width: 100%;
+    width: 80%;
   }
   .section3 .context-2 .par p {
     font-size: 14px;
-    width: 100%;
+    width: 80%;
   }
 
   .section3 .context-2 .btn span {
@@ -396,5 +398,22 @@ body {
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+  }
+}
+@media (max-width: 450px) {
+  .section3 .context-2:nth-child(2) {
+    position: relative;
+    height: 500px;
+    margin-bottom: -152px;
+  }
+  .section3 .context-2 .container {
+    position: absolute;
+    top: 15px;
+  }
+  .section3 .context-2 .title span {
+    width: 80%;
+  }
+  .section3 .context-2 .par p {
+    width: 80%;
   }
 }
