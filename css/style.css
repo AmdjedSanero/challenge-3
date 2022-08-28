@@ -443,3 +443,129 @@ body {
   font-family: "Montserrat", sans-serif;
   color: rgb(160, 160, 160);
 }
+.herbert {
+  background-image: url(../images/sim.png);
+  height: 150vh;
+  background-repeat: no-repeat;
+  position: relative;
+  background-size: cover;
+  overflow: hidden;
+}
+.herbert::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgb(232, 99, 28);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 20%,
+    rgba(232, 99, 28, 1) 100%,
+    rgba(232, 99, 28, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  opacity: 0.5;
+}
+.herbert .container {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  transform: translateY(50%);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
+.herbert .container span {
+  font-size: 30px;
+}
+.herbert .container h1 {
+  font-size: 50px;
+}
+/*Small*/
+
+@media (max-width: 992px) {
+  .herbert {
+    height: 100vh;
+  }
+}
+@media (max-width: 768px) {
+  .herbert {
+    height: 70vh;
+  }
+  .herbert .container {
+    top: 40%;
+  }
+  .herbert .container span {
+    font-size: 20px;
+  }
+  .herbert .container h1 {
+    font-size: 35px;
+  }
+}
+@media (max-width: 600px) {
+  .herbert {
+    height: 40vh;
+  }
+  .herbert .container {
+    top: 20%;
+  }
+  .herbert .container span {
+    font-size: 12px;
+  }
+  .herbert .container h1 {
+    font-size: 25px;
+  }
+}
+.subscribe {
+  background-color: #e8631c;
+  padding-top: 60px;
+  color: #ffffff;
+  padding-bottom: 60px;
+}
+.subscribe .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.inp {
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  left: -25px;
+}
+.inp input {
+  width: 400px;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+}
+.inp .btns {
+  position: absolute;
+  background-color: #303030;
+  height: 100%;
+  width: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  right: -50px;
+}
+@media (max-width: 450px) {
+  .inp input {
+    width: 300px;
+    height: 40px;
+  }
+  .inp .btns {
+    width: 75px;
+
+    right: -50px;
+  }
+}
