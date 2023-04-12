@@ -46,30 +46,81 @@ body {
   z-index: 500;
   width: 100%;
 }
+
 .top-header .container .menu {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .top-header .container .menu .logo img {
   width: 100px;
 }
+
 .top-header .container .menu ul {
   list-style: none;
   display: flex;
   gap: 50px;
   position: relative;
 }
+
 .top-header .container .menu ul li {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: 400;
+  position: relative; /* add position relative to the parent li */
 }
+
+.top-header .container .menu ul .products:hover .sub-menu {
+  display: block; /* show the sub-menu when hovering over the parent li */
+}
+
+.top-header .container .menu .sub-menu {
+  display: none; /* hide the sub-menu by default */
+  position: absolute; /* position the sub-menu absolutely relative to the parent li */
+  top: 100%; /* position the sub-menu below the parent li */
+  left: 0;
+  background-color: #303030;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  width: 150px;
+}
+
+.top-header .container .menu .sub-menu li {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px 0;
+}
+
 .top-header .container .menu .search img {
   width: 20px;
   position: relative;
   left: 40px;
 }
+
+.top-header .container .menu .nav {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .top-header .container .menu ul {
+    display: none;
+  }
+
+  .top-header .container .menu .nav {
+    display: block;
+    cursor: pointer;
+  }
+
+  .top-header .container .menu .nav span {
+    display: block;
+    background-color: #ffffff;
+    height: 2px;
+    margin-bottom: 5px;
+    width: 25px;
+  }
+}
+
 .landing {
   background-image: url(../images/aa.png);
   background-repeat: no-repeat;
@@ -231,6 +282,75 @@ body {
   text-align: center;
   color: #ffffff;
 }
+
+.context-1 .title {
+  font-size: 55px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.context-1 .para {
+  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  max-width: 700px;
+}
+
+.gallery {
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  opacity: 0;
+}
+.slide.active {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls button {
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+}
+
+.controls button:hover {
+  color: #cccccc;
+}
+
+.prev {
+  margin-right: 20px;
+}
+.context-1 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: #ffffff;
+}
 .context-1 .title {
   font-size: 55px;
   font-weight: bold;
@@ -307,6 +427,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .section3 {
   margin-top: 60px;
   display: grid;
